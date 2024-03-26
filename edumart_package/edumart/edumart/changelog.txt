@@ -1,0 +1,19 @@
+/*
+    Theme Name: Edumart Theme
+    Theme URI: http://shtheme.com/demosd/edumart
+    Author: Shtheme
+    Author URI: http://shtheme.com
+    Release Date: 14 December 2022
+    Requirements: WordPress 3.0 or higher, PHP 5
+    Compatibility: WordPress 3.9.1
+    Tags: web app
+    Last Update Date: 14 December 2022
+*/
+
+/**** Changelog ****/
+
+"Please backup your theme pack files at first before you update the theme into the latest version"
+
+
+2022.12.14 - version 1.0.0
+- First release.

@@ -1,0 +1,384 @@
+/*
+Theme Name: Edumart Child Theme
+Theme URI: https://shtheme.com/demosd/edumart
+Description: This is child theme of edumart
+Author: Shtheme
+Author URI: https://themeforest.net/user/shtheme
+Version: 1.0
+Text Domain:  edumart-child
+Template: edumart
+*/
+
+/* ========TABLE OF CONTENTS==========
+00. Body, links, hgroup, paragraphs, general styles
+01. Fixed header & Navigation
+02. Section Intro (Home)
+03. Section About
+04. Section Resume
+05. Section Portfolio
+06. Section Blog
+07. Section Contact
+08. Footer
+09. Loader
+10. Responsive design
+
+/*--------------------------------------------------
+    00. Body, links, hgroup, paragraphs, general styles
+---------------------------------------------------*/
+
+
+
+
+ul.blog-listing > li h2{
+    font-size: 28px;
+}
+h4.comment-title{
+    font-family: 'texgyreadventorbold';
+    font-size: 20px!important;
+    color: #606d87 !important;
+    text-transform: uppercase;
+}
+ul.comments img.avatar{
+    border-radius: 50%;
+}
+ul.comments .com-txt h3{
+    display: inline-grid!important;
+}
+ul.comments .com-txt h3 span{
+    padding-left: 0!important;
+    margin-top: 18px !important;
+}
+
+
+p.comment-form-cookies-consent{
+    display: none!important;
+}
+section.comments-wrapper form .required-field-message,
+.blog-left .leave-comment form .required-field-message{
+    display: none!important;
+}
+p.logged-in-as{
+    margin-bottom: 35px;
+}
+.comment-respond form button{
+    margin-top: 15px;
+}
+.comment-respond:has(.logged-in-as) form button{
+    margin-top: 0;
+}
+#cancel-comment-reply-link{
+    font-size: 16px;
+    border: 1px solid #ff9600;
+    text-transform: none;
+    padding: 4px 12px 6px 12px;
+    border-radius: 4px;
+}
+@media(min-width:541px){
+    #cancel-comment-reply-link{
+        position: absolute;
+        right: 16px;
+    }
+}
+@media(max-width:540px){
+    .leave-comment h4.comment-title:first-child{
+        display: grid;
+    }
+    .leave-comment h4.comment-title > a{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .leave-comment h4.comment-title small{
+        margin-top: 15px;
+    }
+}
+.sidebar .widget_categories ul li{
+    display: block;
+    border-bottom: 1px #eee solid;
+    text-align: right;
+    padding: 10px 0;
+}
+.sidebar .widget_categories ul li:last-child{
+    border-bottom: none;
+}
+.sidebar .widget_categories ul li a{
+    display: block;
+    font-size: 13px;
+    color: #899eaa;
+    float: left;
+}
+.recent-post.widget_news{
+    clear: both;
+    margin-top: 40px;
+}
+.widget_archive ul li{
+    display: block;
+    border-bottom: 1px #eee solid;
+}
+.widget_archive ul li a{ 
+    display: block;
+    padding: 10px 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #899eaa;
+    text-transform: uppercase;
+}
+.widget_archive ul li:last-child{
+    border-bottom: none;
+}
+.sidebar .widget_tag_cloud{
+    margin-top: 40px;
+}
+.sidebar .widget_tag_cloud ul li{
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 6px;
+}
+.sidebar .widget_tag_cloud ul li a{
+    padding: 4px 10px;
+    color: #fff;
+    background: #abbfc9;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-size: 11px!important;
+    font-weight: bold;
+}
+ul.blog-listing.detail > li {
+    margin-bottom: -13px;
+}
+/*------- Pagination -----------*/
+.pagination li.current a{
+    background-color: #ff9600;
+    color: #fff;
+}
+/*----- Search with no result ----*/
+#news.page:has(.search-custom.search-no-result){
+    padding: 25px 120px 120px 120px;
+}
+.search-form input{
+    border-radius: 0;
+}
+.search-custom h4 {
+    text-align: justify;
+    line-height: 45px;
+    margin-bottom: 5%;
+}
+.search-custom form input {
+    max-width: 100% !important;
+    background: #f5f5f5 !important;
+    border: 1px solid #f5f5f5 !important;
+    font-size: 18px !important;
+    color: #7a7a7a !important;
+    padding: 10px 20px !important;
+    height: 50px;
+}
+.search-custom form button{
+    border-radius: 0 !important;
+    color: #fff;
+    font-size: 16px;
+    height: 50px;
+    position: relative;
+    width: 53px;
+    cursor: pointer;
+    float: right;
+    background: #ff9600;
+    margin-top: -50px;
+    padding: 0;
+    letter-spacing: 0;
+    border: 1px solid #ff9600;
+}
+.search-custom form button:hover{
+    border: 1px solid #ff9600;
+    background: #ff9600;
+    color: #fff;
+}
+.search-no-result{
+    padding-top: 15px;
+}
+.search-no-result .form-control:focus{
+    -webkit-box-shadow: unset;
+    box-shadow:unset;
+}
+/*-------Share social -----------*/
+.stButton .stButton_gradient{
+    height: 23px !important;
+    margin-top: 6%;
+}
+.stButton_gradient+.stArrow {
+    margin-top: 7%;
+}
+/*-------End Share social -----------*/
+.footer .subscribe form .input-wrapper{
+    position: relative;
+    height: 44px;
+}
+.footer .subscribe form input[type="submit"]{
+    font-family: 'icomoon' !important;
+    font-size: 20px;
+    width: 46px;
+    height: 44px;
+    float: right;
+    border: none;
+    background: #2c97ea;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    transition: all 0.3s ease 0s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 13px;
+}
+.footer .subscribe form div.wpcf7-validation-errors{
+    border: 2px solid #fff;
+    color: #fff;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 45px;
+}
+.footer .subscribe form span.wpcf7-not-valid-tip{
+    color: #fff;
+    margin-top: 10px;
+}
+ul.courses-listing li a,
+ul.courses-listing li.active a{
+    color: #fff;
+    font-size: 15px;
+}
+ul.courses-listing li{
+    margin-right: 13px;
+}
+ul.courses-listing li a:hover{
+    color: #61CE70;
+}
+div.select-course.isotopeFilters{
+    width: 100%;
+}
+.dialog-widget.dialog-lightbox-widget.dialog-type-buttons.dialog-type-lightbox.elementor-lightbox{
+    display: none!important;
+}
+section.testimonial img.img-circle{
+    border-radius: 50%!important;
+}
+ul.browse-teachers-list figure{
+    margin: 0 auto 28px!important;
+}
+.enquire-now .enquire-btn{
+    margin-top: -20px;
+}
+section.comments-wrapper.padding-lg .comments-wrapper.padding-lg{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+section.comments-wrapper.padding-lg .leave-comment{
+    border-top: 1px solid #cdd3d7;
+}
+p.comment-form-cookies-consent label{
+    display: none!important;
+}
+section.form-wrapper form input.wpcf7-submit,
+section .cnt-block form input.wpcf7-submit{
+    width: unset;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    background: #ff9600;
+    font-family: 'texgyreadventorbold';
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+}
+section.form-wrapper form input.wpcf7-submit:hover{
+    background: #2c97ea;
+    color: #fff;
+}
+section.form-wrapper form span.wpcf7-not-valid-tip{
+    color: #54595F;
+    margin-top: 10px;
+}
+section.form-wrapper form div.wpcf7-validation-errors,
+section .cnt-block form div.wpcf7-mail-sent-ng{
+    border: 2px solid #54595F;
+    margin-left: 0;
+    margin-right: 0;
+}   
+section.elementor-section:has(.faq-wrapper){
+    background: #f3f6f8!important;
+}
+ul.select-opt li input[type=radio]{
+    visibility: unset;
+    position: unset;
+}
+ul.select-opt span.wpcf7-list-item{
+    margin-left: 0px;
+    margin-right: 25px;
+    display: inline-flex;
+}
+ul.select-opt span.wpcf7-list-item-label{
+    margin-left: 10px;
+}
+input.phone-no{
+    margin-top: -25px;
+}
+.elements-apply-form form input.wpcf7-submit{
+    width: unset;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    background: #ff9600;
+    font-family: 'texgyreadventorbold';
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.elements-apply-form form ul.select-opt li input[type=radio]{
+    margin-top: -10px;
+}
+.elements-apply-form form span.wpcf7-not-valid-tip{
+    color: #54595F;
+    margin-top: 10px;
+}
+.elements-apply-form form div.wpcf7-validation-errors,
+.elements-apply-form form div.wpcf7-mail-sent-ng{
+    border: 2px solid #54595F;
+    margin-left: 0;
+    margin-right: 0;
+} 
+.elements-enquire form div.wpcf7-mail-sent-ng{
+    border: 2px solid #54595F;
+    color: #54595F;
+}
+@media (max-width: 480px){
+    .enquire-now .inner .row1{
+        margin: 0 -5px 14px -5px;
+    }
+}
+@media (max-width: 280px){
+    .course-tab > li > a .block {
+        font-size: 9px;
+    }
+    ul.courses-listing li {
+        margin-right: 8px;
+    }
+    .page-template-apply-online .register .regiter-inner{
+        max-width: 280px;
+    }
+    div.datepicker.dropdown-menu{
+        width: 84%;
+    }
+    .datepicker{
+        min-width: unset;
+    }
+}
+.single-course section.about form div.wpcf7-mail-sent-ng{
+    border: 2px solid #54595F;
+     margin-top: 0px;
+}
+@media (min-width: 1280px){
+   .single-course section.about form div.wpcf7-mail-sent-ng{
+        margin-left: 15px;
+        margin-right: 15px;
+    }  
+}
+
+.single-course .comments-wrapper #cancel-comment-reply-link{
+    position: unset;
+}
